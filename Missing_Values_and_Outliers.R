@@ -75,3 +75,4 @@ head(elements)
 myout = sign1(elements[,1:4], qqcrit = 0.975); myout
 myout = pcout(elements[,1:4])
 plot(moss$Fe, moss$Al, col=myout$wfinal01+2)
+
