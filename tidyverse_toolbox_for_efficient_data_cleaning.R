@@ -105,6 +105,7 @@ library(dplyr) # also activate dplyr since it has helpful add on fuctions
 # set wd
 # Wide to long form conversion
 # import as csv , make sure to have heading activated
+Bug.Frequency <- read.csv("Bug.Frequency.csv", sep = ";")
 # if there is no heading R might not recognize all columns
 bugs = Bug.Frequency # easier to code
 head(bugs)
@@ -157,7 +158,7 @@ spread(data=sports, key = performance, value = counts)
 
 ## lets check the alternative from the reshape2 package
 # the argument names differ a bit, but the function structure looks very similar
-dcast(data = sports, name ~ performance, value.var = "counts" )
+reshape2::dcast(data = sports, name ~ performance, value.var = "counts" )
 
 ### Handling Strings in R with "stringr"
 # quotations "" or '' are used to specify data as a string (character)
