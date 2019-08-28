@@ -73,6 +73,8 @@ library(mvoutlier)
 elements = data.frame(Hg = moss$Hg, Fe = moss$Fe,  Al = moss$Al, Ni = moss$Ni) 
 head(elements)
 myout = sign1(elements[,1:4], qqcrit = 0.975); myout
-myout = pcout(elements[,1:4])
 plot(moss$Fe, moss$Al, col=myout$wfinal01+2)
-
+myout = pcout(elements[,1:4]); myout
+plot(moss$Fe, moss$Al, col=myout$wfinal01+2)
+myout = sign2(elements[,1:4], qqcrit = 0.975); myout
+plot(moss$Fe, moss$Al, col=myout$wfinal01+2)
