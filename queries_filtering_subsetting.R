@@ -47,7 +47,6 @@ library(dplyr)
 mytibble = as_tibble(mydf)
 class(mytibble)
 
-
 # Standard queries on a tibble do work
 mytibble[mytibble$b == "A" | mytibble$b == "B",]
 mytibble[3,3]
